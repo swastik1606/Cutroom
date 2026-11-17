@@ -16,7 +16,9 @@ async function createClientsTable() {
             email text not null unique,
             company text,
             notes text,
-            currency text not null
+            user_id integer not null,
+            currency text not null,
+            foreign key(user_id) references user(user_id)
         )`
     )
 
